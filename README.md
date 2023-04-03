@@ -1,6 +1,8 @@
 # 画像スクリーンキャプチャ
 
-## セットアップ方法
+---
+
+# セットアップ方法
 
 ```bash
 $ tree ./ -I "*venv|*.git|*.idea|work|__pycache__"
@@ -27,7 +29,21 @@ $ clip_to_text
 Text from clipboard: clip_to_text
 ```
 
-## （補足）treeコマンドで確認する
+# アンインストール方法
+
+```bash
+$ pip uninstall ClipboardToText
+Proceed (Y/n)? y       
+  Successfully uninstalled ClipboardToText-0.1
+```
+
+# インストールの確認方法
+
+```bash
+pip list
+```
+
+# （補足）treeコマンドで確認する
 
 MacOSにtreeコマンドをインストールする
 
