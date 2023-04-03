@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import pyperclip
 
@@ -13,7 +14,20 @@ def save_clipboard_image():
 
     print(f"{filename} に画像を保存しました。")
 
-if __name__ == '__main__':
+
+def main():
+    # コマンドライン引数からテキストを取得
+    if len(sys.argv) > 1:
+        text = ' '.join(sys.argv[1:])
+        pyperclip.copy(text)
+        print(f"Copied to clipboard: {text}")
+    else:
+        # クリップボードからテキストを取得
+        text = pyperclip.paste()
+        print(f"Text from clipboard: {text}")
+
+
+def main2():
     while True:
         try:
             # 監視間隔を1秒に設定
@@ -36,3 +50,7 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"ERR2: {e}")
             pass
+
+
+if __name__ == "__main__":
+    main()
